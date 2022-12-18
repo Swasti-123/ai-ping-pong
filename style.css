@@ -32,3 +32,8 @@
     line-height: 3;
     text-align: center;
 }
+
+canvas{
+    border: rgb(68, 67, 67)  15px ridge;
+    border-radius: 50px;
+}
