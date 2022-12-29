@@ -1,5 +1,8 @@
 
 /*created by prashant shukla */
+rx=0;
+ry=0;
+rs=0;
 
 var paddle2 =10,paddle1=10;
 
@@ -34,6 +37,16 @@ function modelLoaded(){
   console.log("model has loaded");
   }
 
+function gotPoses(){
+  if(results.length > 0){
+    console.log(results);
+    rx= results[0].pose.rightWrist.x;
+    ry= results[0].pose.rightWrist.y;
+
+    rs = results[0].pose.keypoints[10].score;
+
+}
+}
 
 function draw(){
 	image(video, 0, 0, 700, 600);
@@ -75,6 +88,12 @@ function draw(){
    
    //function move call which in very important
     move();
+
+    if(rs>0.2){
+      fill("blue");
+      stroke("green");
+      circle(rx, ry, 50)
+    }
 }
 
 
