@@ -26,6 +26,7 @@ rightWristX = 0;
 scoreRightWrist = 0;
 
 //Define a variable to hold the status of the game
+game_status="";
 
  
 
@@ -61,10 +62,12 @@ function startGame()
 {
    //Set the value of the status variable created in step 1 to “start”.
  //Update the h3 tag which we have created inside index.html file in project 138 who has id “status” to "Game Is Loaded”.
+ game_status="start";
+ document.getElementById("status").innerHTML = "Game is loaded";
 }
 
 function draw(){
-if() // inside the if condition check if the game_status is equal to the value "start".
+if(game_status == "start") // inside the if condition check if the game_status is equal to the value "start".
 {
   background(0); 
   image(video, 0, 0, 700, 600);
