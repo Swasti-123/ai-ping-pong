@@ -37,3 +37,7 @@ canvas{
     border: rgb(68, 67, 67)  15px ridge;
     border-radius: 50px;
 }
+
+#restart{
+    font-size: 18px;
+}
